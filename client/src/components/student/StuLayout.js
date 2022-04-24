@@ -31,9 +31,11 @@ return(
              )}          
         </div>
     </nav>
+
     <div className="row justify-content-center align-items-center h-100">
         <div className="bg-white shadow  overflow-hidden">
             <div className="ps-4 pt-4 pb-0 pe-4 cover">
+
                 <div className="media align-items-end profile-head">
                     <div className="profile ps-4 pe-5 mt-5">
                         <img className="img mb-2 img-thumbnail" src="https://images.unsplash.com/photo-1422728280635-45167d8b7197?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTU3fHxwZXJzb258ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="..." width="190" /></div>
@@ -84,7 +86,7 @@ return(
             </nav>
         </div>
     </div>
-</div>
+{/* </div> */}
 
 
     <div>       
