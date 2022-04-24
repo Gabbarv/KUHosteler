@@ -134,6 +134,25 @@ body {
     .text1{
         font-weight:600;   
     }
+    .row{
+        width:100%;
+    }
    
+    .box{
+        background-color:white;
+        display: table-cell;
+        margin-bottom: 10px;   
+        text-align:center;
+        padding: 10px 0;
+        width: 100%;
+        margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    
+    }
   
+    .wrapper {
+        display: table;
+        width: 100%;
+    }
    

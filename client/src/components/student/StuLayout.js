@@ -31,7 +31,7 @@ return(
              )}          
         </div>
     </nav>
-    <div className="row d-flex justify-content-center align-items-center h-100">
+    {/* <div className="row d-flex justify-content-center align-items-center h-100"> */}
         <div className="bg-white shadow rounded overflow-hidden">
             <div className="px-5 pt-4 pb-0 cover">
                 <div className="media align-items-end profile-head">
@@ -86,7 +86,7 @@ return(
             </nav>
         </div>
     </div>
-</div>
+{/* </div> */}
 
 
     <div>       

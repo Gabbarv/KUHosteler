@@ -46,7 +46,7 @@ export default function Landing({history}) {
                     <p className="welcome pt-5 fw-bold text-light fs-5 pt-3">Welcome</p>
                     <i className="fa fa-university text-light fs-1"></i>
                     <h1 className="text-light">To the University Hostel Portal</h1>
-                    <p className="text-light ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum labore nulla amet assumenda consectetur quisquam, distinctio rerum ducimus accusamus sint, nam mollitia deserunt temporibus dignissimos ratione asperiores quod? Consequuntur, libero.</p>
+                    <p className="text-light ">University Of Kalyani offers comprehensive hostel facilities for boys and girls separately within the University campus and off campus.Here we provide a comfortable,safe,inclusive,secure and a proper educational environment.</p>
                 </div>
             </div>
         </center>

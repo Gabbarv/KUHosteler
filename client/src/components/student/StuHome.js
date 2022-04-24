@@ -8,7 +8,6 @@ import { Chart as ChartJS } from "chart.js/auto";
 import Footer from "../Footer"
 
 const UserDashboard = ({history}) => {  
-    
     const {  user , token} = isAuthenticated();
     const [ studData , setStuData] = useState( user);
      
@@ -43,7 +42,7 @@ const UserDashboard = ({history}) => {
 
       calculateMealCount();
         return (
-            <div  className="card mb-5">
+            <div>
               <Pie
                 data={{
                   labels: ['OFF', 'M/N', 'M', 'N'],
@@ -96,21 +95,45 @@ const UserDashboard = ({history}) => {
 
     const userInfo = () => {
      
-        return (
+        return(
+         
             <div  className="card mb-5">
                 <h3 className="card-header">User Information</h3>
                 <ul className="list-group">                    
                     <li className="list-group-item">{studData.fname} {user.lname}</li>
                     {
-                      studData.messStatus == 0 || studData.messStatus==1 ? <li text-danger>Disable</li>:
-                      studData.messStatus == 2 ?  <li className="list-group-item text-success">ON</li> : <li className="list-group-item text-danager">OFF</li>
+                      studData.messStatus == 0 || studData.messStatus==1 ? <li className="text-danger">Disable</li>:
+                      studData.messStatus == 2 ?  <li className="list-group-item text-success text-success">ON</li> : <li className="list-group-item text-danager text-success">OFF</li>
                     }                   
                     <li className="list-group-item">{studData.email}</li>
                     <li className="list-group-item">
                         {studData.profileType === 1 ? "Admin" : "Registered User"}
                     </li>
                 </ul>
-            </div>
+            
+         </div>
+
+//         <table >
+//   <tr>
+//     <th>Name:</th>
+//     <td>{studData.fname} {user.lname}</td>
+//   </tr>
+//   <tr>
+//     <th>Meal Status:</th>
+//     {
+//                      studData.messStatus == 0 || studData.messStatus==1 ? <td text-danger>Disable</td>:
+//                        studData.messStatus == 2 ?  <td className="list-group-item text-success">ON</td> : <td className="list-group-item text-danager">OFF</td>
+//              }  
+//   </tr>
+//   <tr>
+//   <th>Email:</th>
+//   <td>{studData.email}</td>
+//   </tr>
+//   <tr>
+//   <th>ProfileType:</th>
+//   <td>{studData.profileType === 1 ? "Admin" : "Registered User"} </td>
+//   </tr>
+// </table>
         );
     };
 
@@ -119,11 +142,19 @@ const UserDashboard = ({history}) => {
         <>
         <StuLayout history={history} >
             {/* show your content in this div */}
-            <div className="row " >                
-                <div  className="col mb-0">{userInfo()}</div>
-                <div  className="col mb-0">{showPieChart()}</div>
-            </div>
            
+            <div className="row" >                
+            {/* <div className="wrapper"> */}
+             <div className="col box"> {userInfo()}
+             {/* <div  className="col mb-0">{userInfo()}</div> */}
+             </div>   
+             {/* <div class="middle"></div>     */}
+             {/* if i remove middle then it looks like parallel */}       
+             <div className="col box"> {showPieChart()}
+              {/* <div  className="col mb-0">{showPieChart()}</div> */}
+            </div>
+            </div>
+            {/* </div> */}
         </StuLayout>
         <Footer />
         </>       
